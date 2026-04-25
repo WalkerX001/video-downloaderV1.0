@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Video Downloader</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0; padding: 2rem;
+            background: #0f0f0f;
+            color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: #1a1a1a;
+            border-radius: 16px;
+            padding: 2.5rem;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+        h1 { margin-top: 0; color: #ff6b6b; }
+        input[type="url"] {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            background: #2a2a2a;
+            color: white;
+            font-size: 1rem;
+            margin: 1rem 0;
+            box-sizing: border-box;
+        }
+        button {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+        }
+        button:hover { background: #ff8787; }
+        .platforms { display: flex; justify-content: center; gap: 1.5rem; margin: 1.5rem 0; }
+        .platforms span { background: #2a2a2a; padding: 6px 16px; border-radius: 20px; font-size: 0.9rem; }
+        .note { font-size: 0.8rem; color: #888; margin-top: 1.5rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📥 Video Downloader</h1>
+        <p>Paste a Facebook, Instagram, or TikTok video URL</p>
+        <div class="platforms">
+            <span>📘 Facebook</span>
+            <span>📸 Instagram</span>
+            <span>🎵 TikTok</span>
+        </div>
+        <form action="/download" method="post">
+            <input type="url" name="url" placeholder="https://www.instagram.com/reel/..." required>
+            <button type="submit">Download Video</button>
+        </form>
+        <div class="note">
+            ⚠️ Use only for your own content or videos you have permission to download.
+        </div>
+    </div>
+</body>
+</html>
