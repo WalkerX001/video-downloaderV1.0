@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: clipcatch               # <-- Your unique name
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py   # or python App.py if that's your filename
+    plan: free
